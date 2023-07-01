@@ -5,6 +5,7 @@
 - **Email**: vasilevskiy.art@gmail.com
 - **Telegram**: @ArtyomVas
 - **Discord**: @Vasashock
+
 ---
 ## About me:
 
@@ -17,6 +18,7 @@ I don't have enough knowledge, experience about Web programming, iclude HTML,CSS
 I think RS School can help to have a good basement for Web-programming.
 
 ---
+
 ## Skills:
 - C#
 - SQL, TSQL
@@ -28,6 +30,7 @@ I think RS School can help to have a good basement for Web-programming.
 - Microsoft Dynamics CRM 
 - OOP 
 - .NET
+
 ---
 ## Code Example:
 CodeWars: Multiply
@@ -38,6 +41,7 @@ function multiply(a, b){
 ```
 
 ---
+
 ## Courses:
 - Exam 483: Programming in C#
 
@@ -45,6 +49,7 @@ function multiply(a, b){
 ![certification](images/Cert.png)
 
 ---
+
 ## Languages:
 
 - Russain - Native
