@@ -30,7 +30,12 @@ ___
 - .NET
 ___
 ## Code Example:
-HackerRank: 2D Array - DS
+CodeWars: Multiply
+```javascript
+function multiply(a, b){
+  return a * b;
+}
+```
 
 ___
 ## Courses:
