@@ -1,1 +1,1 @@
-# rsschool-cv
+https://vasashock.github.io/rsschool-cv/cv
