@@ -23,16 +23,16 @@ I think RS School can help to have a good basement for Web-programming.
 
 ### Skills
 
--C#
--SQL, TSQL
--VS Stuidio
--VS Code
--Git
--GitHub
--GitLab
--Microsoft Dynamics CRM
--OOP
--.NET
+- C#
+- SQL, TSQL
+- VS Stuidio
+- VS Code
+- Git
+- GitHub
+- GitLab
+- Microsoft Dynamics CRM
+- OOP
+- .NET
 
 ---
 
