@@ -105,3 +105,17 @@ footer {
   height: 30px;
   width: auto;
 }
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+}
