@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+.flex-container {
+    max-width: 1440px;
+    min-width: 1440px;
+    max-height: 3442px;
+    min-height: 3442px;
+    margin: 0 auto;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 18%;
+    text-transform: uppercase;
+}
+header {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 82px;
+    
+}
+.logo {
+    width: 24px;
+    height: 24px;
+}
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Расстояние между иконкой и текстом */
+    padding: 8px 20px;
+
+}
+
+.flex-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+    padding-right: 83px;
+}
+
+li {
+   padding: 12px 20px;
+
+   list-style: none;
+   color: #181C29;
+}
+
+.site-title, li, .logo-wrapper { 
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 5%;
+    text-transform: uppercase;
+}
+
+main {
+    background-color: #FF4646;
+    background-image: url('/christmas-shop/images/bg-snow.png'); /* Фон со снежинками */
+
+}
+section {
+    padding: 60px 0;
+}
+.hero {
+    height: 524px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-image: url('images/christmas-text-bg.png');
+    background-size: cover;
+    background-position: center;
+}
