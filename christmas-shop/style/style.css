@@ -14,7 +14,7 @@ body {
     max-height: 3442px;
     min-height: 3442px;
     margin: 0 auto;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); граница для проверки*/
     min-height: 100vh;
 }
 
@@ -52,15 +52,6 @@ header {
 .logo {
     width: 24px;
     height: 24px;
-}
-
-.logo-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    /* Расстояние между иконкой и текстом */
-    padding: 8px 20px;
-
 }
 
 .flex-nav {
@@ -289,12 +280,14 @@ section {
         border: 1px solid rgba(255, 255, 255, 0.5);
     }
 
-    /* .slider-arrow:hover {
+     .slider-arrow:hover {
     background: #FFFFFF;
     color: #181C29;
-    width: 24px;
-    height: 24px;
-} */
+    } 
+     .slider-arrow:hover > img {
+    background: #FFFFFF;
+    color: #181C29;
+    } 
     .allura {
         font-family: 'Allura';
         font-size: 24px;
@@ -389,7 +382,7 @@ section {
 
     .gift-card {
         max-width: 310px;
-        max-height: 342px;
+        height: 342px;
         background-color: #ebf2f8;
         border-radius: 20px;
         display: flex;
@@ -627,14 +620,13 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
         text-decoration: none;
         font-size: 18px;
         transition: background 0.2s;
     }
 
     .social-link:hover {
-        background: #E5E7EB;
+        filter: invert(28%) sepia(95%) saturate(5000%) hue-rotate(-10deg);
     }
 
     .copyright {
@@ -650,3 +642,77 @@ section {
     .footer-made:hover {
          color:#FF4646
     }
+
+ /* block for gifts page */
+
+.gifts-section {
+    padding: 60px 0;
+    background-color: #FF4646;
+    background-image: url('/christmas-shop/images/bg-garland.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
+    border-radius: 20px;
+}
+
+.gifts-page-top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gifts-page-title {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.gifts-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.gifts-tab {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.gifts-tab-active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.gifts-page-cards-content {
+    display: flex;
+    justify-content: center;
+}
+
+.gifts-page-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 310px);
+    gap: 12px;
+}
+.nav-item-active{
+    border-radius: 10px;
+    background: rgba(255, 70, 70, 0.1);
+}
+.nav-item-active a {
+    pointer-events: none; 
+    color: #FF4646;
+}
+.logo-wrapper {
+    cursor: pointer; 
+
+}
+.logo-wrapper > a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+}
