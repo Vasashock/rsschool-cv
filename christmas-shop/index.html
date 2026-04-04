@@ -20,10 +20,10 @@
             </div>
             <nav>
                 <ul class="flex-nav">
-                    <li>Gifts</li>
-                    <li>About</li>
-                    <li>Best</li>
-                    <li>Contacts</li>
+                    <li><a href="gift.html">Gifts</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#best">Best</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
                 </ul>
             </nav>
         </header>
@@ -37,11 +37,11 @@
                         the Magic of new<br>
                         possibilities
                     </h1>
-                    <button class="btn-primary action-small">Explore Magical gifts</button>
+                    <a href="gift.html" class="btn-primary action-small">Explore Magical gifts</a>
                     <p class="hero-footer allura">and Happy New Year</p>
                 </div>
             </section>
-            <section class="about">
+            <section id="about" class="about">
                 <div class="about-container">
                     <div class="about-content">
                         <p class="about-text allura">About</p>
@@ -78,7 +78,7 @@
                 </div>
             </section>
 
-            <section class="best-gifts">
+            <section id="gifts" class="best-gifts">
                 <p class="allura best-gifts-title">Best Gifts</p>
                 <h2 class="h2-text best-gifts-subtitle">Especially for you</h2>
                 <div class="gifts-container">
@@ -104,7 +104,8 @@
                         </div>
                     </div>
                     <div class="gift-card">
-                        <img src="/christmas-shop/images/gift-for-harmony.png" alt="Spontaneous Coding Philosopher" class="gift-img">
+                        <img src="/christmas-shop/images/gift-for-harmony.png" alt="Spontaneous Coding Philosopher"
+                            class="gift-img">
                         <div class="gift-info">
                             <span class="tag tag-pink">For Harmony</span>
                             <span class="gift-name h3-text">Spontaneous Coding Philosopher</span>
@@ -113,11 +114,11 @@
                 </div>
             </section>
 
-            <section class="cta-section">
+            <section id="best" class="cta-section">
                 <div class="cta-content">
                     <h2 class="h2-text cta-title">Ready to start your<br>jouney to a better<br>version of yourself?
                     </h2>
-                    <button class="btn-primary action-small">Explore Magical gifts</button>
+                    <a href="gift.html" class="btn-primary action-small">Explore Magical gifts</a>
 
                     <p class="allura cta-subtitle">The New Year is Coming Soon...</p>
 
@@ -129,24 +130,30 @@
                     </div>
                 </div>
 
-                
+
             </section>
-            <footer class="site-footer">
+            <footer id="contacts" class="site-footer">
                 <div class="footer-cards">
                     <div class="footer-card">
-                        <img src="/christmas-shop/images/svg/santa-claus.svg" alt="Phone" class="footer-icon">
-                        <p class="footer-phone action-large">+375 (29) 111-22-33</p>
-                        <span class="h3-text">Call us</span>
+                        <a href="tel:+375291112233" class="footer-card">
+                            <img src="/christmas-shop/images/svg/santa-claus.svg" alt="Phone" class="footer-icon">
+                            <p class="footer-phone action-large">+375 (29) 111-22-33</p>
+                            <span class="h3-text">Call us</span>
+                        </a>
                     </div>
                     <div class="footer-card">
-                        <img src="/christmas-shop/images/svg/christmas-tree.svg" alt="Location" class="footer-icon">
-                        <p class="footer-address action-large">Magic forest</p>
-                        <span class="h3-text">meet us</span>
+                        <a href="https://maps.app.goo.gl/PioR2B6CpYKMYUjA6" target="_blank" class="footer-card">
+                            <img src="/christmas-shop/images/svg/christmas-tree.svg" alt="Location" class="footer-icon">
+                            <p class="footer-address action-large">Magic forest</p>
+                            <span class="h3-text">meet us</span>
+                        </a>
                     </div>
                     <div class="footer-card">
+                        <a href="mailto:gifts@magic.com" target="_blank" class="footer-card">
                         <img src="/christmas-shop/images/svg/snake.svg" alt="Mail" class="footer-icon">
                         <p class="footer-email action-large">gifts@magic.com</p>
                         <span class="h3-text">Write us</span>
+                        </a>
                     </div>
                 </div>
 
@@ -159,18 +166,19 @@
                             <img src="../christmas-shop/images/facebook.png" alt="Facebook-icon">
                         </a>
                         <a href="#" class="social-link" aria-label="Instagram">
-                            <img src="../christmas-shop/images/instagram.png" alt="Instagram-icon"> 
+                            <img src="../christmas-shop/images/instagram.png" alt="Instagram-icon">
                         </a>
                         <a href="#" class="social-link" aria-label="X">
                             <img src="../christmas-shop/images/X.png" alt="X-icon">
                         </a>
                     </div>
                     <p class="copyright paragraph">© Copyright 2025, All Rights Reserved</p>
-                    <p class="allura footer-made">Made in Rolling Scopes School</p>
+                    <p class="allura footer-made"><a href="https://rs.school">Made in Rolling Scopes School</a></p>
                 </div>
             </footer>
 
         </main>
     </div>
 </body>
+
 </html>

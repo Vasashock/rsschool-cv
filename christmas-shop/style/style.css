@@ -1,3 +1,6 @@
+html { 
+    scroll-behavior: smooth; 
+}
 body {
     margin: 0;
     padding: 0;
@@ -68,10 +71,23 @@ header {
 }
 
 li {
-    padding: 12px 20px;
-
+    cursor: pointer;
     list-style: none;
     color: #181C29;
+}
+li:hover {
+    border-radius: 10px;
+    background: rgba(255, 70, 70, 0.1);
+    color: #FF4646;
+}
+li > a {
+    padding: 12px 20px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .site-title,
@@ -145,17 +161,28 @@ section {
     }
 
     .btn-primary {
-        position: relative;
-        z-index: 2;
-        min-width: 235px;
-        min-height: 56px;
-        padding: 20px 32px;
-        background-color: #181C29;
-        border-radius: 20px;
-        border: none;
-        white-space: nowrap;
-        min-width: auto;
-        width: auto;
+    position: relative;
+    z-index: 2;
+    min-width: 235px;
+    min-height: 56px;
+    margin-top:-3px;
+    padding: 21px 32px;
+    background-color: #181C29;
+    border-radius: 20px;
+    border: none;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box; 
+}
+    .btn-primary:hover {
+        background-color: #FFF;
+        color:#181C29;
+        cursor:pointer;
     }
 
     .about {
@@ -367,7 +394,15 @@ section {
         border-radius: 20px;
         display: flex;
         flex-direction: column;
-
+        cursor:pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gift-card:hover {
+        transform: translateY(-5px); 
+    }
+    .gift-card:hover .gift-name {
+        color:#FF4646;
+        
     }
 
     .gift-img {
@@ -532,6 +567,7 @@ section {
         justify-content: center;
         height: 204px;
     }
+    
 
     .footer-card {
         flex: 1;
@@ -542,7 +578,20 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .footer-card:hover {
+        transform: translateY(-5px);
+    }
+    .footer-card:hover p {
+        color: #FF4646;
+    }
+    .footer-card:hover span {
+        color: #FF4646;
+    }
+    .footer-card > a {
+        padding: 0px;
     }
 
     .footer-icon {
@@ -597,4 +646,7 @@ section {
     .footer-made {
         margin: 0px;
         text-align: center;
+    }
+    .footer-made:hover {
+         color:#FF4646
     }

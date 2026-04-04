@@ -4,15 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg" href="christmas-shop/images/svg/favicon.svg">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="/christmas-shop/images/svg/favicon.svg">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Site</h1>
-    </header>
+   <div class="flex-container">
+        <header>
+            <div class="logo-wrapper">
+                <img class="logo" src="/christmas-shop/images/svg/favicon.svg" alt="logo">
+                <span class="site-title">The Gifts</span>
+            </div>
+            <nav>
+                <ul class="flex-nav">
+                    <li><a href="gift.html">Gifts</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#best">Best</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
     <main>
         <p>This is where your content goes.</p>
+         <footer id="contacts" class="site-footer">
+                <div class="footer-cards">
+                    <div class="footer-card">
+                        <a href="tel:+375291112233" class="footer-card">
+                            <img src="/christmas-shop/images/svg/santa-claus.svg" alt="Phone" class="footer-icon">
+                            <p class="footer-phone action-large">+375 (29) 111-22-33</p>
+                            <span class="h3-text">Call us</span>
+                        </a>
+                    </div>
+                    <div class="footer-card">
+                        <a href="https://maps.app.goo.gl/PioR2B6CpYKMYUjA6" target="_blank" class="footer-card">
+                            <img src="/christmas-shop/images/svg/christmas-tree.svg" alt="Location" class="footer-icon">
+                            <p class="footer-address action-large">Magic forest</p>
+                            <span class="h3-text">meet us</span>
+                        </a>
+                    </div>
+                    <div class="footer-card">
+                        <a href="mailto:gifts@magic.com" target="_blank" class="footer-card">
+                        <img src="/christmas-shop/images/svg/snake.svg" alt="Mail" class="footer-icon">
+                        <p class="footer-email action-large">gifts@magic.com</p>
+                        <span class="h3-text">Write us</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="socials">
+                    <div class="socials-items">
+                        <a href="#" class="social-link" aria-label="Telegram">
+                            <img src="../christmas-shop/images/telegram.png" alt="Telegram-icon">
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <img src="../christmas-shop/images/facebook.png" alt="Facebook-icon">
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <img src="../christmas-shop/images/instagram.png" alt="Instagram-icon">
+                        </a>
+                        <a href="#" class="social-link" aria-label="X">
+                            <img src="../christmas-shop/images/X.png" alt="X-icon">
+                        </a>
+                    </div>
+                    <p class="copyright paragraph">© Copyright 2025, All Rights Reserved</p>
+                    <p class="allura footer-made"><a href="https://rs.school">Made in Rolling Scopes School</a></p>
+                </div>
+            </footer>
+
     </main>
     <script src="script.js"></script>
 </body>
