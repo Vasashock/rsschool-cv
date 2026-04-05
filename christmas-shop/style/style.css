@@ -114,7 +114,7 @@ section {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: #FF4646;
-    background-image: url('/christmas-shop/images/bg-snow.png');
+    background-image: url('../images/bg-snow.png');
 }
     .hero-content {
         display: flex;
@@ -181,7 +181,7 @@ section {
         display: flex;
         flex-direction: row;
         padding: 60px 82px;
-        background-image: url('/christmas-shop/images/bg-snow.png');
+        background-image: url('../images/bg-snow.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -227,7 +227,7 @@ section {
         padding: 60px 0px 60px 8px;
         text-align: center;
         gap: 15px;
-        background-image: url('/christmas-shop/images/bg-snow.png');
+        background-image: url('../images/bg-snow.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -351,7 +351,7 @@ section {
     }
 
     .best-gifts {
-        background-image: url('/christmas-shop/images/bg-snow.png');
+        background-image: url('../images/bg-snow.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -462,8 +462,8 @@ section {
 
         background-color: #FF4646;
         background-image:
-            url('/christmas-shop/images/bg-snow.png'),
-            url('/christmas-shop/images/bg-forest.png');
+            url('../images/bg-snow.png'),
+            url('../images/bg-forest.png');
         background-repeat: no-repeat, no-repeat;
         background-position: center, bottom center;
         background-size: 100% 100%, 100% auto;
@@ -648,7 +648,7 @@ section {
 .gifts-section {
     padding: 60px 0;
     background-color: #FF4646;
-    background-image: url('/christmas-shop/images/bg-garland.png');
+    background-image: url('../images/bg-garland.png');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
