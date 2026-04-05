@@ -285,7 +285,7 @@ section {
     color: #181C29;
     } 
      .slider-arrow:hover > img {
-    background: #FFFFFF;
+    filter: invert(27%) sepia(97%) saturate(7467%) hue-rotate(357deg) brightness(96%) contrast(105%);
     color: #181C29;
     } 
     .allura {
