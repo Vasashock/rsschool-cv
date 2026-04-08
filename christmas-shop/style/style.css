@@ -681,7 +681,7 @@ section {
     background: transparent;
     color: #FFFFFF;
     text-transform: uppercase;
-    cursor: pointer;
+    cursor: default;
 }
 
 .gifts-tab-active {
