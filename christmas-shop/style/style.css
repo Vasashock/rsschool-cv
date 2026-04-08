@@ -701,6 +701,7 @@ section {
 .nav-item-active{
     border-radius: 10px;
     background: rgba(255, 70, 70, 0.1);
+    cursor: default;
 }
 .nav-item-active a {
     pointer-events: none; 
