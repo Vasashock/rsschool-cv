@@ -10,12 +10,12 @@ body {
 
 .flex-container {
     max-width: 1440px;
-    min-width: 1440px;
     max-height: 3442px;
     min-height: 3442px;
     margin: 0 auto;
     /* box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); граница для проверки*/
     min-height: 100vh;
+    justify-content: center;
 }
 
 h1 {
@@ -716,4 +716,72 @@ section {
     align-items: center;
     gap: 8px;
     padding: 8px 20px;
+}
+.burger-menu {
+  display: none; /* Скрыта на больших экранах */
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-right: 15px;
+  position: relative;
+  flex-direction: column; /* Выстраиваем полоски в колонку */
+  justify-content: space-between; /* Равномерное распределение */
+  align-items: center; /* Центрируем по горизонтали */
+  box-sizing: border-box;
+}
+.burger-menu span {
+  display: block;
+  width: 20px; /* Длина полоски */
+  height: 1px; /* Толщина полоски */
+  background-color: #181C29; /* Цвет (как у текста меню) */
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  /* Container */
+  .flex-container {
+    max-width: 100%;
+    min-height: auto;
+  }
+    /* 1. Показываем бургер */
+  .burger-menu {
+    display: flex; /* Делаем видимой */
+  }
+  header {
+   padding: 0px 12px;
+   padding-left:8px;
+  }
+  .flex-nav{
+     display: none;
+     
+    }
+      /* 1. Показываем бургер */
+  .slider-container{
+    padding-left: 2px;
+  }
+      .gifts-container{
+    flex-wrap: wrap;
+  }
+      .footer-cards {
+    flex-direction: column;
+        height: auto;
+  }
+  .about {
+    padding-left: 8px;
+  }
+  .about-content {
+    padding-top: 45px;
+    padding-right: 60px;
+    width: 256px;
+  }
+  .h2-text {
+    text-align: left;
+  }
+  .img-santa {
+    width: 376px;
+    height: 528px;
+    object-fit: cover;
+  }
 }
