@@ -784,4 +784,30 @@ section {
     height: 528px;
     object-fit: cover;
   }
+  .h2-new, .best-gifts-subtitle {
+    text-align: center;
+  }
+  .slider-arrows {
+    padding-right: 8px;
+  }
+  .site-footer {
+    padding-left: 8px;
+    padding-right: 8px;
+
+  }
+  .footer-card {
+        padding-bottom: 21px;
+  }
+  .cta-section {
+        background-color: #FF4646;
+        background-image:
+            url('../images/bg-snow.png'),
+            url('../images/bg-forest.png');
+        background-size: cover, cover;
+        background-repeat: no-repeat, no-repeat;
+        background-position: center, center;
+    }
+    .cta-title {
+        text-align: center;
+    }
 }
