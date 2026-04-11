@@ -7,6 +7,7 @@ body {
     padding: 0;
     background-color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; 
 }
 
 .flex-container {
@@ -857,11 +858,14 @@ section {
     .cta-title {
         text-align: center;
     }
+     /* gift-page */
+    .gifts-page-grid {
+        grid-template-columns: repeat(2, 310px);
+    }
 }
 
 @media (max-width: 380px) {
 
-    /* Container */
     .flex-container {
         max-width: 100%;
         min-height: auto;
@@ -968,5 +972,24 @@ section {
 
     }
 
+    .gifts-page-grid {
+    grid-template-columns: repeat(1, 310px);
+    }
+    .gifts-page-title {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .gifts-tabs {
+        padding-left: 13px;
+        padding-right: 13px;
+        gap: 0px;
+    }
+    .gifts-tab {
+        padding: 12px 8px;
+    }
+    .site-footer-gift {
+        padding-top: 60px;
+    }
 
 }
+    
