@@ -69,10 +69,12 @@ li {
     color: #181C29;
 }
 
-li:hover {
-    border-radius: 10px;
-    background: rgba(255, 70, 70, 0.1);
-    color: #FF4646;
+@media (hover: hover) {
+    li:hover {
+        border-radius: 10px;
+        background: rgba(255, 70, 70, 0.1);
+        color: #FF4646;
+    }
 }
 
 li>a {
@@ -176,10 +178,12 @@ section {
     box-sizing: border-box;
 }
 
-.btn-primary:hover {
-    background-color: #FFF;
-    color: #181C29;
-    cursor: pointer;
+@media (hover: hover) {
+    .btn-primary:hover {
+        background-color: #FFF;
+        color: #181C29;
+        cursor: pointer;
+    }
 }
 
 .about {
@@ -287,14 +291,16 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.slider-arrow:hover {
-    background: #FFFFFF;
-    color: #181C29;
-}
+@media (hover: hover) {
+    .slider-arrow:hover {
+        background: #FFFFFF;
+        color: #181C29;
+    }
 
-.slider-arrow:hover>img {
-    filter: invert(27%) sepia(97%) saturate(7467%) hue-rotate(357deg) brightness(96%) contrast(105%);
-    color: #181C29;
+    .slider-arrow:hover>img {
+        filter: invert(27%) sepia(97%) saturate(7467%) hue-rotate(357deg) brightness(96%) contrast(105%);
+        color: #181C29;
+    }
 }
 
 .allura {
@@ -400,13 +406,14 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gift-card:hover {
-    transform: translateY(-5px);
-}
+@media (hover: hover) {
+    .gift-card:hover {
+        transform: translateY(-5px);
+    }
 
-.gift-card:hover .gift-name {
-    color: #FF4646;
-
+    .gift-card:hover .gift-name {
+        color: #FF4646;
+    }
 }
 
 .gift-img {
@@ -586,16 +593,18 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.footer-card:hover {
-    transform: translateY(-5px);
-}
+@media (hover: hover) {
+    .footer-card:hover {
+        transform: translateY(-5px);
+    }
 
-.footer-card:hover p {
-    color: #FF4646;
-}
+    .footer-card:hover p {
+        color: #FF4646;
+    }
 
-.footer-card:hover span {
-    color: #FF4646;
+    .footer-card:hover span {
+        color: #FF4646;
+    }
 }
 
 .footer-card>a {
@@ -640,8 +649,10 @@ section {
     transition: background 0.2s;
 }
 
-.social-link:hover {
-    filter: invert(28%) sepia(95%) saturate(5000%) hue-rotate(-10deg);
+@media (hover: hover) {
+    .social-link:hover {
+        filter: invert(28%) sepia(95%) saturate(5000%) hue-rotate(-10deg);
+    }
 }
 
 .copyright {
@@ -655,8 +666,10 @@ section {
     text-align: center;
 }
 
-.footer-made:hover {
-    color: #FF4646
+@media (hover: hover) {
+    .footer-made:hover {
+        color: #FF4646
+    }
 }
 
 /* block for gifts page */
@@ -768,7 +781,7 @@ section {
     border-radius: 2px;
 }
 
-@media (width: 768px) {
+@media  (max-width: 768px) {
 
     /* Container */
     .flex-container {
@@ -864,6 +877,34 @@ section {
     }
 }
 
+@media (min-width: 769px) and (max-width: 1440px) {
+    .about-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+        .footer-cards {
+        flex-wrap: wrap;
+
+    }
+    .gifts-page-grid {
+        grid-template-columns: repeat(2, 310px);
+    }
+    
+}
+@media (min-width: 382px) and (max-width: 680px) { 
+.gifts-page-grid {
+        grid-template-columns: repeat(1, 310px);
+    }
+}
+@media (min-width: 381px) and (max-width: 767px) {
+    .about-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
 @media (max-width: 380px) {
 
     .flex-container {
@@ -918,6 +959,7 @@ section {
         padding-bottom: 60px;
         padding-left: 20px;
         padding-right: 20px;
+        width: auto;
     }
     
     .gifts-container {
@@ -990,6 +1032,6 @@ section {
     .site-footer-gift {
         padding-top: 60px;
     }
-
+    
 }
     
