@@ -897,12 +897,32 @@ section {
     }
 }
 @media (min-width: 381px) and (max-width: 767px) {
+    .about {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding: 10px 8px;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
     .about-container {
         flex-wrap: wrap;
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        overflow: hidden;
     }
-    
+
+    .about-content {
+        padding: 40px 30px;
+        width: 100%;
+        max-width: 400px;
+    }
+        .img-santa {
+      width: 100%;
+        max-width: 100%; /* Расширяем на всю ширину */
+        box-sizing: border-box;
+    }
 }
 
 @media (max-width: 380px) {
