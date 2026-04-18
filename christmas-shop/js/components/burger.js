@@ -1,31 +1,35 @@
 export function initBurger() {
-    const burgerElem = document.getElementsByClassName('burger-menu')[0];
-    const mobMenu = document.getElementsByClassName('mob-burger-menu')[0];
-    const linksMobMenu = document.querySelectorAll('.mob-menu_link');
-    const bodyElem = document.getElementsByTagName('body')[0];
-    const isDesktop = window.matchMedia('(min-width: 769px)');
+    const burgerElement = document.querySelector('.burger-menu');
+    const mobileMenuElement = document.querySelector('.mob-burger-menu');
+    const mobileMenuLinks = document.querySelectorAll('.mob-menu_link');
+    const bodyElement = document.body;
+    const desktopMediaQuery = window.matchMedia('(min-width: 769px)');
 
+    if (!burgerElement || !mobileMenuElement) {
+        return;
+    }
 
-    burgerElem.addEventListener('click', () => {
-        mobMenu.classList.toggle('active');
-        burgerElem.classList.toggle('active');
-        bodyElem.classList.toggle('lock-scroll');
+    const closeMenu = () => {
+        burgerElement.classList.remove('active');
+        mobileMenuElement.classList.remove('active');
+        bodyElement.classList.remove('lock-scroll');
+    };
+
+    const toggleMenu = () => {
+        burgerElement.classList.toggle('active');
+        mobileMenuElement.classList.toggle('active');
+        bodyElement.classList.toggle('lock-scroll');
+    };
+
+    burgerElement.addEventListener('click', toggleMenu);
+
+    mobileMenuLinks.forEach((linkElement) => {
+        linkElement.addEventListener('click', closeMenu);
     });
-    
-    linksMobMenu.forEach((elem) => {
-        elem.addEventListener('click', () => {
-            burgerElem.classList.toggle('active');
-            mobMenu.classList.toggle('active');
-            bodyElem.classList.toggle('lock-scroll');
-        })
-    })
 
-    isDesktop.addEventListener('change', (e) => {
-        if(e.matches){
-            burgerElem.classList.remove('active');
-            bodyElem.classList.remove('lock-scroll');
-            mobMenu.classList.remove('active');
+    desktopMediaQuery.addEventListener('change', ({ matches }) => {
+        if (matches) {
+            closeMenu();
         }
-    })
-
+    });
 }

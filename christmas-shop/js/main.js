@@ -1,13 +1,29 @@
 import { initBurger } from './components/burger.js';
+import { initGift } from './components/gift.js';
 import { initSlider } from './components/slider.js';
 import { initTimer } from './components/timer.js';
+import { giftsData } from './data/gifts_data.js';
+import { initCategory } from './components/category.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-initBurger();
-initSlider();
-initTimer();
-//   renderGifts();
+    const hasBestGiftsSection = document.querySelector('.best-gifts');
+    const hasCountdownSection = document.querySelector('.cta-section');
+    const hasGiftsPageSection = document.querySelector('.gifts-section');
+
+    initBurger();
+    initSlider();
+
+    if (hasBestGiftsSection) {
+        initGift(giftsData);
+    }
+
+    if (hasCountdownSection) {
+        initTimer();
+    }
+
+    if (hasGiftsPageSection) {
+        initCategory(giftsData);
+    }
 });
 
 // console.log(`Implementation of the burger menu on both pages: +22

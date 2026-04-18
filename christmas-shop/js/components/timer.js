@@ -1,26 +1,44 @@
+function getTimeElements() {
+  const countdownItems = document.querySelectorAll('.countdown-item span');
+
+  return {
+    daysElement: countdownItems[0],
+    hoursElement: countdownItems[1],
+    minutesElement: countdownItems[2],
+    secondsElement: countdownItems[3],
+  };
+}
+
+function getRemainingTimeUntilNewYear() {
+  const now = new Date();
+  const currentYear = now.getUTCFullYear();
+  const nextYearDate = new Date(Date.UTC(currentYear + 1, 0, 1, 0, 0, 0));
+  const difference = nextYearDate - now;
+
+  return {
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+    seconds: Math.floor((difference % (1000 * 60)) / 1000),
+  };
+}
+
 export function initTimer() {
-    const daysElem = document.querySelector('.countdown-item:nth-child(1) span');
-    const hoursElem = document.querySelector('.countdown-item:nth-child(2) span');
-    const minutesElem = document.querySelector('.countdown-item:nth-child(3) span');
-    const secondsElem = document.querySelector('.countdown-item:nth-child(4) span');
+  const { daysElement, hoursElement, minutesElement, secondsElement } = getTimeElements();
 
-    function updateTime() {
-        const now = new Date();
-        const currentYear = now.getUTCFullYear();
-        const nextYear = new Date(Date.UTC(currentYear + 1, 0, 1, 0, 0, 0));
+  if (!daysElement || !hoursElement || !minutesElement || !secondsElement) {
+    return;
+  }
 
-        const diffrent = nextYear - now;
+  const updateTime = () => {
+    const { days, hours, minutes, seconds } = getRemainingTimeUntilNewYear();
 
-        const days = Math.floor(diffrent / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diffrent % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((diffrent % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diffrent % (1000 * 60)) / 1000);
+    daysElement.textContent = days;
+    hoursElement.textContent = hours;
+    minutesElement.textContent = minutes;
+    secondsElement.textContent = seconds;
+  };
 
-        daysElem.textContent = days;
-        hoursElem.textContent = hours;
-        minutesElem.textContent = minutes;
-        secondsElem.textContent = seconds;
-    }
-  updateTime();             
-  setInterval(updateTime, 1000); 
+  updateTime();
+  setInterval(updateTime, 1000);
 }
