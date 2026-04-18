@@ -9,6 +9,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden; 
 }
+.lock-scroll {
+    overflow: hidden;
+}
 
 .flex-container {
     max-width: 1440px;
@@ -648,6 +651,47 @@ section {
     font-size: 18px;
     transition: background 0.2s;
 }
+.mob-burger-menu {
+  opacity: 0;
+  visibility: hidden; 
+  display:flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  padding: 348px 0px;
+  top: 60px; 
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 100;
+  margin: 0 0;
+  overflow-y: auto;
+}
+.mob-burger-menu {
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+.mob-burger-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); 
+  display: flex; 
+  position: fixed;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  padding: 352px 0px;
+}
+    
+.burger-menu.active span:first-child {
+    transform: translateY(3px) rotate(-45deg);
+}
+.burger-menu.active span:last-child {
+    transform: translateY(-4px) rotate(45deg);
+}
+.mob-menu_link {
+    color: inherit;
+}
 
 @media (hover: hover) {
     .social-link:hover {
@@ -779,6 +823,8 @@ section {
     background-color: #181C29;
     /* Цвет (как у текста меню) */
     border-radius: 2px;
+    transition: transform 0.3s ease, opacity 1s ease; 
+    transform-origin: center; /* Вращение вокруг центра полоски */
 }
 
 @media  (max-width: 768px) {
@@ -1052,6 +1098,9 @@ section {
     .site-footer-gift {
         padding-top: 60px;
     }
+    .mob-burger-menu.active {
+        padding: 245px 0px;
+    }
     
 }
-    
+
