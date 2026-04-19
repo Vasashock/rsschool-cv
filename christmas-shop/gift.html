@@ -9,10 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg" href="./images/svg/favicon.svg">
+    <script src="./js/main.js" type="module"></script>
 </head>
 
 <body>
-    <div class="flex-container">
+    <div class="flex-container" id="top">
         <header>
             <div class="logo-wrapper">
                  <a href="index.html"><img class="logo" src="./images/svg/favicon.svg" alt="logo">
@@ -31,6 +32,20 @@
                 <span></span>
                 <span></span>
             </button>
+            <ul class="mob-burger-menu">
+                <li class="mob-menu_item">
+                    <a class="mob-menu_link action-large" href="gift.html">gifts</a>
+                </li>
+                <li class="mob-menu_item">
+                    <a class="mob-menu_link action-large" href="./index.html#about">about</a>
+                </li>
+                <li class="mob-menu_item">
+                    <a class="mob-menu_link action-large" href="./index.html#best">best</a>
+                </li>
+                <li class="mob-menu_item">
+                    <a class="mob-menu_link action-large" href="#contacts">contacts</a>
+                </li>
+            </ul>
         </header>
         <main>
             <section class="gifts-section">
@@ -153,6 +168,11 @@
                     </div>
                 </div>
             </section>
+            <a href="#top" class="scroll-to-top" aria-label="Up">
+                <span class="scroll-btn">
+                    <img src="/images/arrow-up.png" alt="Scroll to top">
+                </span>
+            </a>
             <footer id="contacts" class="site-footer site-footer-gift">
                 <div class="footer-cards">
                     <div class="footer-card">
@@ -200,7 +220,6 @@
 
         </main>
     </div>
-    <script src="script.js"></script>
 </body>
 
 </html>
