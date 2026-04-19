@@ -4,6 +4,7 @@ import { initSlider } from './components/slider.js';
 import { initTimer } from './components/timer.js';
 import { giftsData } from './data/gifts_data.js';
 import { initCategory } from './components/category.js';
+import { initModal } from './components/modal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const hasBestGiftsSection = document.querySelector('.best-gifts');
@@ -24,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hasGiftsPageSection) {
         initCategory(giftsData);
     }
+
+    initModal(giftsData);
 });
 
 // console.log(`Implementation of the burger menu on both pages: +22

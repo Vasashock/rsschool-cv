@@ -252,6 +252,10 @@ section {
     display: flex;
     gap: 20px;
     justify-items: center;
+    width: max-content;
+}
+
+.slider-viewport {
     padding-left: 82px;
     overflow: hidden;
 }
@@ -850,20 +854,59 @@ section {
     pointer-events: none;
     padding: 0;
 
-    
+
     animation: fadeIn linear both;
     animation-timeline: scroll(root);
     animation-range: 0px 300px;
 }
+
 .scroll-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  box-sizing: border-box; /* Лучше border-box */
+  box-sizing: border-box; 
   text-decoration: none;
   cursor: pointer;
+}
+.gift-card-selected {
+    position:fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: #666;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.gift-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 28, 41, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.gift-overlay-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 @keyframes fadeIn {
@@ -900,6 +943,10 @@ section {
 
     /* 1. Показываем бургер */
     .slider-container {
+        width: max-content;
+    }
+
+    .slider-viewport {
         padding-left: 2px;
     }
 
@@ -1128,6 +1175,10 @@ section {
     }
 
     .slider-container {
+        width: max-content;
+    }
+
+    .slider-viewport {
         padding-left: 2px;
     }
 

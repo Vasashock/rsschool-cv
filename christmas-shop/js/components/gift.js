@@ -6,14 +6,15 @@ function getRandomInt(min, max) {
 
 export function initGift(giftsData) {
   const giftCards = document.querySelectorAll('.best-gifts .gift-card');
+  const availableGifts = [...giftsData];
 
-  if (!giftCards.length || !giftsData.length) {
+  if (!giftCards.length || !availableGifts.length) {
     return;
   }
 
   giftCards.forEach((cardElement) => {
-    const randomIndex = getRandomInt(0, giftsData.length - 1);
-    const randomGift = giftsData[randomIndex];
+    const randomIndex = getRandomInt(0, availableGifts.length - 1);
+    const [randomGift] = availableGifts.splice(randomIndex, 1);
 
     fillGiftCard(cardElement, randomGift);
   });

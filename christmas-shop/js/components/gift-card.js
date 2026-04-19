@@ -41,6 +41,11 @@ export function fillGiftCard(cardElement, gift) {
     imageElement.src = imageSrc;
     imageElement.alt = gift.name;
   }
+
+  cardElement.dataset.giftName = gift.name;
+  cardElement.setAttribute('tabindex', '0');
+  cardElement.setAttribute('role', 'button');
+  cardElement.setAttribute('aria-label', `${gift.name}. Open gift details`);
 }
 
 export function createGiftCard(templateElement, gift) {
