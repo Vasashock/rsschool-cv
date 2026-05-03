@@ -13,8 +13,8 @@
 
 <body>
     <main class="container">
-        <div class="navigation">
-            <button id="button-burger">☰</button>
+        <aside class="navigation" id="sidebar">
+            <button id="button-burger" aria-label="Toggle sidebar">☰</button>
             <h3 class="h3-text">Period</h3>
             <h4 class="h4-text">Month</h4>
             <select class="select-month" id="select-month">
@@ -27,7 +27,7 @@
                 <option value="6" class="action-small">July</option>
                 <option value="7" class="action-small">August</option>
                 <option value="8" class="action-small">September</option>
-                <option value="9" class="action-small">Ocober</option>
+                <option value="9" class="action-small">October</option>
                 <option value="10" class="action-small">November</option>
                 <option value="11" class="action-small">December</option>
             </select>
@@ -38,33 +38,29 @@
                 <option value="2027" class="action-small">2027</option>
             </select>
             <nav class="nav-links">
-                <a class="nav title-project action-small active">Projects</a>
-                <a class="nav title-project action-small ">Employess</a>
+                <a class="nav title-project action-small active" data-view="projects">Projects</a>
+                <a class="nav title-project action-small" data-view="employees">Employees</a>
             </nav>
-        </div>
-        <div class="main-container">
+        </aside>
+        <section class="main-container">
             <div class="button-contaiter">
-                <h1>Project</h1>
+                <h1 id="view-title">Projects</h1>
                 <button id="add-project-btn" class="add-btn action-small">Add Project</button>
+                <button id="add-employee-btn" class="add-btn action-small hidden">Add Employee</button>
                 <button id="add-seed-btn" class="seed-btn action-small">Seed Data</button>
             </div>
-            <table id="table-content">
-                <thead>
-                    <tr>
-                        <th class="sortable filtrable" data-sort="companyName" data-filter="companyName">Company Name
-                        </th>
-                        <th>Projec Name</th>
-                        <th>Budget</th>
-                        <th>Employee Capacity</th>
-                        <th>Employee</th>
-                        <th>Estimate Income</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-
+            <div id="filter-chips" class="filter-chips"></div>
+            <div class="table-wrap">
+                <table id="table-content">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="summary-panel" class="summary-panel"></div>
+        </section>
     </main>
+    <div id="overlay-root"></div>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
