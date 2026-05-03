@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./image/visual-data.png">
+</head>
+
+<body>
+    <main class="container">
+        <aside class="navigation" id="sidebar">
+            <button id="button-burger" aria-label="Toggle sidebar">☰</button>
+            <h3 class="h3-text">Period</h3>
+            <h4 class="h4-text">Month</h4>
+            <select class="select-month" id="select-month">
+                <option value="0" class="action-small">January</option>
+                <option value="1" class="action-small">February</option>
+                <option value="2" class="action-small">March</option>
+                <option value="3" class="action-small">April</option>
+                <option value="4" class="action-small">May</option>
+                <option value="5" class="action-small">June</option>
+                <option value="6" class="action-small">July</option>
+                <option value="7" class="action-small">August</option>
+                <option value="8" class="action-small">September</option>
+                <option value="9" class="action-small">October</option>
+                <option value="10" class="action-small">November</option>
+                <option value="11" class="action-small">December</option>
+            </select>
+            <h4 class="h4-text">Year</h4>
+            <select class="select-year" id="select-year">
+                <option value="2025" class="action-small">2025</option>
+                <option value="2026" class="action-small">2026</option>
+                <option value="2027" class="action-small">2027</option>
+            </select>
+            <nav class="nav-links">
+                <a class="nav title-project action-small active" data-view="projects">Projects</a>
+                <a class="nav title-project action-small" data-view="employees">Employees</a>
+            </nav>
+        </aside>
+        <section class="main-container">
+            <div class="button-contaiter">
+                <h1 id="view-title">Projects</h1>
+                <button id="add-project-btn" class="add-btn action-small">Add Project</button>
+                <button id="add-employee-btn" class="add-btn action-small hidden">Add Employee</button>
+                <button id="add-seed-btn" class="seed-btn action-small">Seed Data</button>
+            </div>
+            <div id="filter-chips" class="filter-chips"></div>
+            <div class="table-wrap">
+                <table id="table-content">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="summary-panel" class="summary-panel"></div>
+        </section>
+    </main>
+    <div id="overlay-root"></div>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

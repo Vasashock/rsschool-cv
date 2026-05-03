@@ -1,2 +1,11 @@
-https://vasashock.github.io/rsschool-cv/cv
-https://vasashock.github.io/rsschool-cv/
+## Tech Stack
+
+- HTML
+- CSS
+- Vanilla JavaScript
+- `localStorage` for persistence
+
+## How To Run
+
+1. Open `dashboard/index.html` in the browser.
+
